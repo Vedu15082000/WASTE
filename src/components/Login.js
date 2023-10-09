@@ -4,6 +4,7 @@ import { Form, Alert } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../context/UserAuthContext";
+import abc from "./abc.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -36,7 +37,9 @@ const Login = () => {
   return (
     <>
       <div className="p-4 box">
-        <img src = {require("./abc.png")}></img>
+        <div >
+        <img width="100" height="100" class="center" alt="Leaf" src={abc}/>
+        </div>
         <h2 className="mb-3">IBM CALL FOR CODE</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
@@ -73,7 +76,7 @@ const Login = () => {
         <Link to="/phonesignup">
           <div className="d-grid gap-2 mt-3">
             <Button variant="success" type="Submit">
-              Sign in with Phone
+              Sign in / Register with Phone
             </Button>
           </div>
         </Link>
